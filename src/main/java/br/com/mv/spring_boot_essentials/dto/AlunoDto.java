@@ -1,9 +1,7 @@
 package br.com.mv.spring_boot_essentials.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-
-import java.math.BigDecimal;
-
 
 @Getter
 @Setter
@@ -11,11 +9,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @ToString
 @Builder
-public class ProdutoDto {
+public class AlunoDto {
 
+    @NotBlank
     private String nome;
-    private BigDecimal preco;
-    private Integer quantidade;
-
-
+    @NotBlank
+    private String email;
 }
